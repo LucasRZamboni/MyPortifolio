@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+
+}
+.animated-button {
+    background-color: blue;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+  
+  .animated-button:hover {
+    background-color: red;
+    transform: scale(1.1);
+  }
+  

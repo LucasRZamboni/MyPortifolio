@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylehseet.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+                <div class="buttons">
+                    <span style="--i:0;--x:-1;--y:0;"><ion-icon name="mail-outline"></ion-icon></span>
+                    <span style="--i:1;--x:1;--y:0;"><ion-icon name="videocam-outline"></ion-icon></span>
+                    <span style="--i:2;--x:0;--y:-1;"><ion-icon name="camera-outline"></ion-icon></span>
+                    <span style="--i:3;--x:0;--y:1;"><ion-icon name="game-controller-outline"></ion-icon></span>
+                    <span style="--i:4;--x:-1;--y:1;"><ion-icon name="planet-outline"></ion-icon></span>
+                    <span style="--i:5;--x:-1;--y:-1;"><ion-icon name="alarm-outline"></ion-icon></span>
+                    <span style="--i:6;--x:1;--y:-1;"><ion-icon name="musical-notes-outline"></ion-icon></span>
+                    <span style="--i:7;--x:1;--y:1;"><ion-icon name="diamond-outline"></ion-icon></span>
+            </div>
+            <div class="close">
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <script>
+        let buttons = document.querySelector('.buttons');
+        let close = document.querySelector('.close');
+        buttons.onclick = function(){
+            buttons.classList.add('active');
+        }
+        close.onclick = function(){
+            buttons.classList.remove('active');
+        }
+    </script>
+</body>
+</html>

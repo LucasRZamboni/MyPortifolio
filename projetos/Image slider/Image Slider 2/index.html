@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="mediasheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>teste</title>
+</head>
+
+<body>
+    <div class="page__teste">
+        <span onclick="plusSlides(1)"><img class="page__img left" src="seta.png" alt=""></span>
+        <span onclick="plusSlides(-1)"><img class="page__img right" src="seta.png" alt=""></span>
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem1.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem2.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem3.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem4.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem5.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem6.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem7.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem8.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem9.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem10.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem11.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem12.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem13.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem14.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem15.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem16.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem17.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem18.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem19.jpg" alt="">
+    </div>
+    <div class="teste fade">
+        <img id="teste__img" src="assets/imagem20.jpg" alt="">
+    </div>
+
+
+    <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+      </div> -->
+
+
+    <script type="text/javascript">
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("teste");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i + 1 < dots.length; i++) {
+                dots.className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+</body>
+
+</html>

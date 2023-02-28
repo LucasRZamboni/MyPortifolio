@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ---------------------------------------------- INICIO DO DESING ---------------------------------------------- */
+#back-page{
+    background: rgb(22, 22, 22);
+    width: 100%;
+    height: 100%;
+}
+.top-page{
+    background: rgba(90, 90, 90, 0);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 11px 25px rgba(255, 255, 0, 0.466);
+    border-radius: 4px;
+}
+.top-page h1{
+    text-shadow: 2px 3px rgba(163, 163, 163, 0.568);
+    box-shadow: 3px 5px 5px black ;
+    color: wheat;
+    padding-left: 10px;
+    padding-right: 4px;
+    border-radius: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    font-weight: 600;
+}
+.lateral-menu{
+    background: rgb(22, 22, 22);
+    height: 100vh;
+    max-width: 100px;
+    box-shadow: 20px 18px 25px rgba(255, 255, 0, 0.466);
+    border-radius: 10px;
+    display: flex;
+    padding: 2px;
+}
+#menu{
+    width: 100%;
+    height: 250px;
+    background: rgba(59, 59, 59, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+#menu ul{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 4px;
+}
+#menu li {
+    list-style: none;
+    color: wheat;
+    width: 100%;
+    margin-top: 10px;
+}
+.btn{
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.icone{
+    border: 2px solid wheat;
+    border-radius: 50%;
+    padding: 2px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px rgb(117, 117, 117);
+    z-index: 1000;
+    transition: all .3s ease-in-out;
+}
+.btn p{
+    position: absolute;
+    color: rgba(59, 59, 59, 0);
+    font-weight: 500;
+}
+.btn:hover{
+    transition: all .2s ease-in-out;
+    box-shadow: 0 0 10px wheat;
+    width: 100%;
+    border: none;
+}
+.btn:hover .icone{
+    transform: scale(1.2);
+    transition: all .2s ease-in-out; 
+    box-shadow: 0 0 10px wheat;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+}
+.btn:hover p{
+    transition: all .3s ease-in-out;
+    position: unset;
+    color: wheat;
+    margin-left: 30px;
+    font-size: 15px;
+    
+}

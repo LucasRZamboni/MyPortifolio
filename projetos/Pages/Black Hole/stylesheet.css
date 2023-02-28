@@ -1,0 +1,552 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media screen and (min-width: 1367px) {
+    #dust {
+        transition: all 5s ease-in-out;
+        animation: spindust 1s linear infinite;
+    }
+}
+
+body {
+    overflow: hidden;
+}
+
+#img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+}
+
+#img img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.text3 {
+    position: absolute;
+    margin-top: -550px;
+    margin-left: -700px;
+}
+
+.text3 h1 {
+    text-align: center;
+    font-weight: 200;
+    font-family: Impact;
+    text-shadow: 0 1px 5px white;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.text {
+    position: absolute;
+    margin-top: -400px;
+    margin-left: -51%;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 219, 219, 0);
+    box-shadow: 0 0 5px white;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    /* border-bottom-right-radius: -50px; */
+}
+
+.text2 {
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 51%;
+    padding: 20px;
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px white;
+    background-color: rgba(0, 219, 219, 0);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.text2 p {
+    padding: 50px;
+    text-align: justify;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    color: white;
+    text-indent: 30px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.text p {
+    padding: 50px;
+    text-align: justify;
+    font-weight: 200;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    color: white;
+    text-indent: 30px;
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#redgiant {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(223, 29, 15);
+    box-shadow: inset -35px 0 20px rgb(179, 1, 1);
+    margin-left: -75%;
+    margin-top: 0;
+    transition: all 1s ease-in-out;
+}
+
+#redgiant::after {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 10px 0 20px rgb(223, 29, 15);
+    transition: all 1s ease-in-out;
+}
+
+#bloco:hover #redgiant::after {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 10px 0 20px rgb(223, 29, 15);
+    transition: all 10s ease-in-out;
+}
+
+#redgiant::before {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin-top: 0;
+    margin-left: 10px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(179, 1, 1, 0);
+    box-shadow: 0px 0 35px rgb(223, 29, 15);
+    transition: all 1s ease-in-out;
+}
+
+#bloco:hover #redgiant::before {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 30px;
+    content: "";
+    border-radius: 50%;
+    background: rgb(223, 29, 15);
+    box-shadow: 75px 0 35px rgb(223, 29, 15);
+    transition: all 10s ease-in-out;
+}
+
+#sun {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(255, 153, 0);
+    box-shadow: inset 35px 0 20px rgb(148, 89, 0);
+    margin-left: 75%;
+    margin-top: 0;
+}
+
+#sun::after {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: -0 0 25px rgb(255, 153, 0);
+    transition: all 10s ease-in-out;
+}
+
+#bloco:hover #sun::after {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: -0 0 20px rgb(255, 153, 0);
+    transition: all 10s ease-in-out;
+}
+
+#sun::before {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    margin-top: 0;
+    margin-left: -10px;
+    content: "";
+    border-radius: 50%;
+    background: rgba(255, 153, 0, 0);
+    box-shadow: -0px 0 35px rgb(255, 153, 0);
+    transition: all 1s ease-in-out;
+}
+
+#bloco:hover #sun::before {
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -30px;
+    content: "";
+    border-radius: 50%;
+    background: rgb(255, 153, 0);
+    box-shadow: -75px 0 35px rgb(255, 153, 0);
+    transition: all 10s ease-in-out;
+}
+
+#bloco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(0, 0, 0);
+    z-index: 10000;
+    box-shadow: 0 0 20px white;
+    transition: all 1s ease-in-out;
+}
+
+#bloco:hover {
+    width: 100px;
+    height: 100px;
+    /* border-left: 5px solid grey;
+    border-right: 8px solid rgb(255, 153, 0);
+    box-shadow: 0 0 20px rgba(19, 18, 18, 0.884); */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.164);
+    transition: all 16s ease-in-out;
+    background: rgba(0, 0, 0, 0.877);
+}
+
+#bloco:hover h1 {
+    transition: all 4s ease-in-out;
+    font-size: 20px;
+}
+
+#bloco::before {
+    position: absolute;
+    margin-left: 0px;
+    width: 50px;
+    height: 50px;
+    content: "";
+    background: rgba(22, 20, 20, 0);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 0 20px white; */
+    transition: all 15s ease-in-out;
+    border-left: 2px solid rgb(255, 255, 255);
+    border-right: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 40px 15px rgb(255, 255, 255);
+    animation: spin .1s linear infinite;
+}
+
+#bloco:hover::before {
+    position: absolute;
+    margin-left: 0px;
+    width: 418px;
+    height: 418px;
+    content: "";
+    background: rgba(0, 0, 0, 0.726);
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 0 20px white; */
+    transition: all 15s ease-in-out;
+    border-left: 10px solid rgb(255, 255, 255);
+    border-right: 10px solid rgb(255, 255, 255);
+    box-shadow: 0 0 40px 15px rgb(255, 255, 255);
+    animation: spin .1s linear infinite;
+}
+
+#bloco::after {
+    position: absolute;
+    margin-left: 0;
+    width: 150px;
+    height: 0px;
+    content: "";
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 5s ease-in-out;
+    box-shadow: 0 0px 25px 10px rgba(255, 255, 255, 0.733);
+    opacity: 5;
+}
+
+#bloco:hover::after {
+    position: absolute;
+    margin-left: -550px;
+    width: 200px;
+    height: 10px;
+    content: "";
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856), rgba(255, 0, 0, 0.308), rgba(136, 66, 66, 0.342), rgba(255, 0, 0, 0.295), rgba(209, 31, 31, 0.856), rgba(104, 47, 47, 0.644), rgba(161, 14, 14, 0.596), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 25px 10px rgb(0, 0, 0);
+    animation: spin2 .1s linear infinite;
+    opacity: 100;
+    transition: all 5s ease-in-out;
+}
+
+#dust {
+    position: absolute;
+    margin-left: 0;
+    width: 750px;
+    height: 10px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856), rgba(255, 0, 0, 0.308), rgba(136, 66, 66, 0.342), rgba(255, 0, 0, 0.295), rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.288), rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.281), rgba(0, 0, 0, 0.178), rgba(0, 0, 0, 0.288), rgba(255, 187, 1, 0.377), rgba(155, 126, 64, 0.295), rgba(255, 187, 1, 0.281), rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 25px 10px rgba(0, 0, 0, 0.301);
+    opacity: 100;
+}
+
+#dust::after {
+    position: absolute;
+    margin-left: 0;
+    width: 150px;
+    height: 0px;
+    content: "";
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 5s ease-in-out;
+    box-shadow: 0 0px 25px 10px rgba(255, 255, 255, 0.733);
+    opacity: 5;
+}
+
+#bloco:hover #dust::after {
+    position: absolute;
+    margin-left: 550px;
+    width: 200px;
+    height: 10px;
+    content: "";
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(255, 238, 0, 0.308), rgba(136, 123, 66, 0.342), rgba(255, 208, 0, 0.295), rgba(209, 162, 31, 0.856), rgba(104, 91, 47, 0.644), rgba(161, 134, 14, 0.596), rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 25px 10px rgba(0, 0, 0, 0.315);
+    animation: spin2 .1s linear infinite;
+    opacity: 100;
+    transition: all 5s ease-in-out;
+}
+
+
+/* #bloco:hover::after {
+    position: absolute;
+    margin-left: 0;
+    width: 700px;
+    height: 10px;
+    content: "";
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.856), rgba(255, 0, 0, 0.308), rgba(136, 66, 66, 0.342), rgba(255, 0, 0, 0.295), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(0, 0, 0, 0.856), rgba(255, 187, 1, 0.377), rgba(155, 126, 64, 0.295), rgba(255, 187, 1, 0.281), rgba(0, 0, 0, 0.856));
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0px 25px 10px rgb(0, 0, 0);
+    animation: spin2 .1s linear infinite;
+    opacity: 100;
+    transition: all 10s ease-in-out;
+} */
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spindust {
+    0% {
+        transform: rotatex(0deg);
+        width: 750px;
+    }
+    50% {
+        width: 1050px;
+    }
+    100% {
+        transform: rotatex(360deg);
+        width: 750px;
+    }
+}
+
+@keyframes spin2 {
+    0% {
+        transform: rotatex(0deg);
+    }
+    100% {
+        transform: rotatex(360deg);
+    }
+}
+
+#bloco:hover #spray {
+    margin-top: -489px;
+    width: 20px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 -10px 25px 10px white;
+    transition: all 10s ease-in;
+    animation: spinspray .1s linear infinite;
+    opacity: 100%;
+}
+
+#spray {
+    opacity: 0%;
+    margin-top: -489px;
+    width: 20px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 25px 10px white;
+    animation: spinspray .1s linear infinite;
+}
+
+#bloco:hover #spray::after {
+    margin-left: -12px;
+    margin-top: -120px;
+    content: "";
+    width: 45px;
+    height: 100px;
+    border-radius: 40%;
+    position: absolute;
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 25px 10px rgb(255, 255, 255);
+    transition: all 10s ease-in-out;
+}
+
+#bloco:hover #spray::before {
+    margin-left: -5px;
+    margin-top: -70px;
+    content: "";
+    width: 30px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 25px 10px rgb(255, 255, 255);
+    transition: all 10s ease-in-out;
+}
+
+#spray2 {
+    opacity: 0%;
+    margin-top: 489px;
+    width: 20px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0 25px 10px white;
+    animation: spinspray .1s linear infinite;
+}
+
+#bloco:hover #spray2 {
+    margin-top: 489px;
+    width: 20px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 10px 25px 10px white;
+    transition: all 10s ease-in;
+    animation: spinspray .1s linear infinite;
+    opacity: 100%;
+}
+
+#bloco:hover #spray2::after {
+    margin-left: -12px;
+    margin-top: 120px;
+    content: "";
+    width: 45px;
+    height: 100px;
+    border-radius: 40%;
+    position: absolute;
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 25px 10px rgb(255, 255, 255);
+    transition: all 10s ease-in-out;
+}
+
+#bloco:hover #spray2::before {
+    margin-left: -5px;
+    margin-top: 70px;
+    content: "";
+    width: 30px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    background: rgb(245, 245, 245);
+    box-shadow: 0 0 25px 10px rgb(255, 255, 255);
+    transition: all 10s ease-in-out;
+}
+
+@keyframes spinspray {
+    0% {
+        transform: rotatey(0deg);
+    }
+    100% {
+        transform: rotatey(360deg);
+    }
+}

@@ -1,0 +1,199 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #223243;
+}
+.container{
+    padding: 40px;
+    border-radius: 25px;
+    border: 8px solid #223243;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35);
+}
+.container .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+}
+.container .form.signin,
+.container.signinForm .form.signup{
+    display: none;
+}
+.container.signinForm .form.signin{
+    display: flex;
+}
+.container .form h2{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.container .form .inputBox{
+    position: relative;
+    width: 300px;
+}
+.container .form .inputBox input{
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background: #223243;
+    border: 1px solid rgb(0, 0,  0,0.1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1em;
+    box-shadow: -5px -5px 15px rgb(0, 0,  0,0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35);
+    transition: 0.5s;
+    outline: none;
+}
+
+.container .form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 12px 10px 12px 48px;
+    pointer-events: none;
+    font-size: 1em;
+    font-weight: 300;
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    color: rgb(255, 255, 255, 0.5);
+}
+.container .form .inputBox input:valid ~ span,
+.container .form .inputBox input:focus ~ span{
+    color: #00dfc4;
+    border: 1px solid #00dfc4;
+    background: #223243;
+    transform: translateX(25px) translateY(-6px);
+    font-size: 0.6em;
+    padding: 0 8px;
+    border-radius: 10px;
+    letter-spacing: 0.1em;
+    box-shadow: 0 -2px 5px white;
+}
+.container .form .inputBox input:valid ,
+.container .form .inputBox input:focus{
+    border: 1px solid #00dfc4;
+    box-shadow: 0 0 10px white;;
+}
+.container .form .inputBox ion-icon{
+    position: absolute;
+    top: 15px;
+    left: 16px;
+    width: 25px;
+    padding: 2px 0;
+    padding-right: 2px;
+    color: #00dfc4;
+    border-right: 1px solid #00dfc4;
+}
+.container .form .inputBox input[type="submit"]{
+    background: #00dfc4;
+    color: #223243;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35);
+    z-index: 10000;
+}
+.container .form .inputBox input[type="submit"]:hover{
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35),
+    0 0 10px white;
+}
+.container .form .inputBox input[type="submit"]:active{
+    opacity: 70%;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35),
+    0 0 10px #00dfc4;
+}
+.container .form .inputBox::before{
+    position: absolute;
+    content: "";
+    border: 1px solid #00dfc4;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35),
+    0 0 10px white;
+    width: 0px;
+    height: 60px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0);
+    margin-left: -11px;
+    margin-top: -9px;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+}
+.container .signup .inputBox:nth-child(6):hover:before,
+.container .signin .inputBox:nth-child(4):hover:before{
+    position: absolute;
+    content: "";
+    border: 1px solid #00dfc4;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35),
+    0 0 10px white;
+    width: 318px;
+    height: 60px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0);
+    margin-left: -11px;
+    margin-top: -11px;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    opacity: 100;
+}
+.container .signin .inputBox:nth-child(2):hover::before,
+.container .signin .inputBox:nth-child(3):hover::before,
+.container .signup .inputBox:nth-child(2):hover::before,
+.container .signup .inputBox:nth-child(3):hover::before,
+.container .signup .inputBox:nth-child(4):hover::before,
+.container .signup .inputBox:nth-child(5):hover::before{
+    position: absolute;
+    content: "";
+    border: 1px solid #00dfc4;
+    box-shadow: -5px -5px 15px rgb(255, 255, 255, 0.1),
+    5px 5px 15px rgb(0, 0,  0,0.35),
+    inset -5px -5px 15px rgb(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgb(0, 0,  0,0.35),
+    0 0 10px white;
+    width: 318px;
+    height: 60px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0);
+    margin-left: -11px;
+    margin-top: -9px;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+    opacity: 100;
+}
+
+.container .form p{
+    color: rgb(255, 255, 255, 0.5);
+    font-size: 0.7em;
+    font-weight: 300;
+}
+.container .form p a{
+    font-weight: 500;
+    color: #fff;
+}

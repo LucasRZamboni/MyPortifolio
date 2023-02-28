@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remover espaços</title>
+</head>
+
+<style>
+      /* CSS para estilizar a página */
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Constantia";
+}
+body{
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+h1{
+	margin: 20px;
+}
+.container {
+	width: 800px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+input {
+	width: 90%;
+	height: 30px;
+	text-align: center;
+	border-radius: 10px;
+	border: 2px solid black;
+}
+.input-box {
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	width: 100%;
+	box-shadow: 0 0 10px black;
+	border-radius: 25px;
+}
+button{
+	width: 100px;
+	height: 40px;
+	margin: 10px;
+	box-shadow: 0 0 10px black;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+button:hover{
+	opacity: 80%;
+}
+button:active{
+	background: #778899;
+}
+.output-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	width: 100%;
+	box-shadow: 0 0 10px black;
+	border-radius: 25px;
+}
+p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	height: 30px;
+	text-align: center;
+	box-shadow: 0 0 10px black;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+}
+</style>
+
+  <body>
+    <div class="container">
+      <h1>Remover Espaços em Branco e Caracteres Especiais</h1>
+      <div class="input-box">
+        <input type="text" id="input" placeholder="Digite a aqui">
+        <br>
+        <button id="clean-button">Limpar</button>
+      </div>
+      <div class="output-box">
+        	<h1>Frase limpa</h1><p id="output">------------------</p>
+      </div>
+    </div>
+    <script>
+      // Código JavaScript para remover espaços em branco e caracteres especiais
+      var input = document.getElementById("input");
+      var cleanButton = document.getElementById("clean-button");
+      var output = document.getElementById("output");
+
+      cleanButton.addEventListener("click", function() {
+        // Remover espaços duplos
+        var cleanedInput = input.value.replace(/\s+/g, ' ');
+	 
+	// Remover espaços 
+      	cleanedInput = input.value.replace(/\s/g, '');
+
+        // Remover caracteres especiais
+	cleanedInput = cleanedInput.replace(/[^\w\s]/gi, '');
+
+        	output.innerHTML = cleanedInput;
+      });
+    </script>
+  </body>
+</html>

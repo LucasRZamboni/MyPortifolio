@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" media="screen">
+    <link rel="stylesheet" href="mediasheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>CADASTRO</title>
+</head>
+
+<body>
+    <section class="cadastro">
+        <div class="cadastro__container">
+            <img class="cadastro__imagem" src="cadastrologo.png" alt="logo cadastro">
+            <h1 class="cadastro__titulo-titulo">Cadastre-se</h1>
+        </div>
+        <div class="cadastro__form">
+            <ul>
+                <label class="cadastro__label" for="nome">Nome completo:</label>
+                <li>
+                    <input class="cadastro__formulario nome" type="text" name="nome" placeholder="Ex: Fulano da silva">
+                </li>
+                <label class="cadastro__label" for="data">Data de Nascimento:</label>
+                <li>
+                    <input class="cadastro__formulario data" type="text" name="data" placeholder="Ex: 01/01/1900">
+                </li>
+                <label class="cadastro__label" for="cpf">CPF:</label>
+                <li>
+                    <input class="cadastro__formulario cpf" type="input" name="cpf" pattern="(\d{3}\.?\d{3}\.?\d{3}-?\d{2})" placeholder="Ex: 123.456.789-10">
+                </li>
+                <label class="cadastro__label" for="email">E-mail:</label>
+                <li>
+                    <input class="cadastro__formulario email" type="text" name="email" placeholder="Ex: fulano@email.com">
+                </li>
+                <label class="cadastro__label" for="senha">Senha:</label>
+                <li>
+                    <input class="cadastro__formulario senha" type="password" name="senha">
+                </li>
+            </ul>
+        </div>
+        <button class="btn__cadastro">Cadastrar</button>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+@media screen and (min-width: 450px) {
+    li:hover::after {
+        width: 73%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .btn__cadastro {
+        width: 50%;
+        /* margin-top: 1em; */
+        height: 50px;
+    }
+    ul {
+        width: 80%;
+        align-self: center;
+    }
+    .cadastro__imagem {
+        margin-top: 2em;
+        width: 8em;
+        height: 8em;
+    }
+    .cadastro__titulo-titulo {
+        padding: 1em 0em 0 0;
+    }
+    .cadastro__form {
+        margin-top: 0.5em;
+    }
+    li:hover::after {
+        width: 61%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .cadastro {
+        /* flex-direction: row;*/
+        align-items: center;
+        justify-content: center; 
+        height: calc(100vh - 60px);
+        flex-wrap: wrap;
+    }
+    .btn__cadastro {
+        width: 40%;
+        margin-top: 1em;
+        height: 60px;
+        align-self: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+    ul {
+        width: 100%;
+    }
+    .cadastro__formulario {
+        margin: .1em 0 .5em 0;
+        font-size: 22px;
+    }
+    .cadastro__label {
+        margin-top: .1em;
+        margin-bottom: 0;
+    }
+    .cadastro__imagem {
+        margin-top: 1em;
+        width: 12em;
+        height: 12em;
+    }
+    .cadastro__titulo-titulo {
+        padding: 1em 0em 0 0;
+        margin-bottom: 1em;
+        font-size: 40px;
+    }
+    .cadastro__container {
+        width: 60%;
+    }
+    .cadastro__form {
+        width: 85%;
+    }
+    li:hover::after {
+        margin-bottom: 8px;
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 1366px) and (max-width: 2900px) {
+    .cadastro {
+        flex-direction: row;
+        justify-content: center;
+        height: calc(100vh - 100px);
+        flex-wrap: wrap;
+        width: calc(100% - 100px);
+    }
+    .btn__cadastro {
+        width: 40%;
+        margin: 1em 1em;
+        height: 100px;
+        align-self: center;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    ul {
+        width: 100%;
+    }
+    .cadastro__label {
+        font-size: 26px;
+    }
+    .cadastro__formulario {
+        margin: .5em 0 1em 0;
+        height: 60px;
+    }
+    .cadastro__imagem {
+        margin-top: 2em;
+        width: 16em;
+        height: 16em;
+    }
+    .cadastro__titulo-titulo {
+        padding: 1em 0em 0 0;
+        font-size: 60px;
+    }
+    .cadastro__container {
+        width: 50%;
+    }
+    .cadastro__form {
+        width: 50%;
+    }
+    li::after {
+        height: 80px;
+    }
+    li:hover::after {
+        width: 43%;
+        height: 80px;
+        margin-bottom: 10px;
+        border-radius: 25px;
+    }
+}

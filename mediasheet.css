@@ -1,0 +1,212 @@
+/* --------------------------------------- MEDIA SCREEN ---------------------------------------*/
+/* --------------------------------------- MEDIA SCREEN 430PX ---------------------------------------*/
+
+@media only screen and (max-width: 430px){
+
+    main .meio .area-dev ul li p,
+    main .meio .outros ul li p {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+/* --------------------------------------- MEDIA SCREEN 430PX ---------------------------------------*/
+
+/* --------------------------------------- MEDIA SCREEN 450PX ---------------------------------------*/
+@media only screen and (max-width: 450px) {
+    main .meio .home:nth-child(1)::before {
+        width: 250px;
+        margin-top: 75px;
+        margin-left: -20px;
+    }
+
+    main .meio .home:nth-child(1) {
+        font-size: 40px;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+    }
+
+    .menu {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    main .meio .home:nth-child(1)::before {
+        width: 250px;
+        margin-top: 70px;
+        margin-left: -20px;
+    }
+
+    main .meio .home:nth-child(1) {
+        font-size: 50px;
+    }
+
+    main .meio .home:nth-child(2) {
+        margin-top: 110px;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+    }
+
+    .menu {
+        font-size: 1.2em;
+    }
+}
+
+/* --------------------------------------- MEDIA SCREEN 450PX ---------------------------------------*/
+/* --------------------------------------- MEDIA SCREEN 530PX ---------------------------------------*/
+
+@media only screen and (max-width: 530px) and (min-width: 430px){
+
+    main .meio .area-dev ul li p,
+    main .meio .outros ul li p {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+}
+/* --------------------------------------- MEDIA SCREEN 530PX ---------------------------------------*/
+/* --------------------------------------- MEDIA SCREEN 600PX ---------------------------------------*/
+
+@media only screen and (min-width: 600px) {
+    main .meio .home:nth-child(1)::before {
+        width: 490px;
+        margin-top: 150px;
+        margin-left: 0px;
+    }
+
+    main .meio .home:nth-child(1) {
+        font-size: 120px;
+    }
+
+    main .meio .home:nth-child(2) {
+        margin-top: 170px;
+    }
+
+    .menu {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 450px) {
+    main .meio .home:nth-child(1)::before {
+        width: 370px;
+        margin-top: 105px;
+        margin-left: -20px;
+    }
+
+    main .meio .home:nth-child(1) {
+        font-size: 80px;
+    }
+
+    main .meio .home:nth-child(2) {
+        margin-top: 130px;
+    }
+
+    header ul {
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: center;
+    }
+
+    .menu {
+        font-size: 1.2em;
+    }
+}
+
+/* --------------------------------------- MEDIA SCREEN 600PX ---------------------------------------*/
+
+/* --------------------------------------- MEDIA SCREEN 750 PX---------------------------------------*/
+
+@media only screen and (min-width: 750px) {
+    main .direita {
+        width: 80px;
+        /* box-shadow: -18px 0px 34px 10px #0b10189d; */
+    }
+
+    main .esquerda {
+        width: 80px;
+        /* box-shadow: 18px 0px 34px 10px #0b10189d; */
+    }
+
+    main .meio .home:nth-child(1)::before {
+        width: 590px;
+        margin-top: 180px;
+        margin-left: 0px;
+    }
+
+    main .meio .home:nth-child(1) {
+        font-size: 140px;
+    }
+
+    main .meio .home:nth-child(2) {
+        margin-top: 190px;
+    }
+
+    .menu {
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    main .direita {
+        width: 35px;
+        /* box-shadow: -5px 0px 10px 5px #0b10189d; */
+    }
+
+    main .esquerda {
+        width: 30px;
+        /* box-shadow: 5px 0px 10px 5px #0b10189d; */
+    }
+
+}
+
+/* --------------------------------------- MEDIA SCREEN 750 PX---------------------------------------*/
+/* --------------------------------------- MEDIA SCREEN 900 PX---------------------------------------*/
+@media only screen and (min-width: 900px) {
+
+    main .meio .area-dev ul li p,
+    main .meio .outros ul li p {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 530px){
+
+    main .meio .area-dev ul li p,
+    main .meio .outros ul li p {
+        font-size: 25px;
+        margin-top: 10px;
+    }
+}
+
+/* --------------------------------------- MEDIA SCREEN 900 PX---------------------------------------*/
+/* --------------------------------------- MEDIA SCREEN 1100 PX---------------------------------------*/
+@media only screen and (min-width: 1100px) {
+
+    main .meio .area-dev ul,
+    main .meio .outros ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    main .meio .area-dev ul,
+    main .meio .outros ul {
+        list-style: none;
+    }
+}
+
+/* --------------------------------------- MEDIA SCREEN ---------------------------------------*/

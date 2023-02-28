@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: black;
+    font-family: "Bookman Old Style";
+    font-weight: 400;
+    background-color: #501c1c;
+    font-size: 16px;
+}
+
+
+/*----------------------------------------------------------------*/
+
+main {
+    width: 350px;
+    height: 450px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #8f2222;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgb(253, 145, 145);
+    border: 2px solid #4d0e0e;
+}
+
+.mensagem {
+    border: 2px solid #4d0e0e;
+    background-color: #8a6161;
+    color: #e4c3c0;
+    width: 90%;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 1em;
+    box-shadow: 0 0 10px rgb(253, 145, 145);
+    transition: all .3s;
+}
+
+.titulo__mensagem {
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    box-shadow: none;
+    text-transform: uppercase;
+    color: #501515;
+    text-shadow: 0 0 10px rgb(253, 145, 145);
+    background-color: transparent;
+}
+
+.email__mensagem,
+.nome__mensagem,
+.texto__mensagem {
+    padding-left: 1em;
+}
+
+.email__mensagem:hover,
+.nome__mensagem:hover,
+.texto__mensagem:hover {
+    transition: .3s;
+    animation: piscar 1s ease infinite;
+}
+
+.texto__mensagem {
+    height: 150px;
+    text-align: justify;
+    padding-top: .5em;
+}
+
+.texto__mensagem::placeholder {
+    position: absolute;
+    top: .5em;
+}
+
+.mensagem::placeholder {
+    color: #4d0e0e;
+    padding-left: .5em;
+}
+
+.email__mensagem:focus,
+.nome__mensagem:focus,
+.texto__mensagem:focus {
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px white;
+}
+
+.btn__mensagem {
+    cursor: pointer;
+    width: 50%;
+    color: #4d0e0e;
+    font-weight: 700;
+}
+
+.btn__mensagem:hover {
+    transition: .3s;
+    box-shadow: 0 0 10px white, inset 0 0 10px #fa7070;
+}
+
+@keyframes piscar {
+    0% {
+        box-shadow: 0 0 10px rgb(253, 145, 145);
+    }
+    50% {
+        box-shadow: 0 0 15px rgb(253, 253, 253);
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(253, 145, 145);
+    }
+}

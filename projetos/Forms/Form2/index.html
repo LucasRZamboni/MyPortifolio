@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>Animated Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form signup">
+            <h2>Sign Up</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <ion-icon name="person-outline"></ion-icon>
+                <span>username</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <ion-icon name="mail-outline"></ion-icon>
+                <span>email address</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <span>create password</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <span>confirm password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Create Account">                
+            </div>
+            <p>Already a member ? <a href="#" class="login">Log in</a></p>
+        </div>
+
+        <!-- SIGN PART -->
+
+        <div class="form signin">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <ion-icon name="person-outline"></ion-icon>
+                <span>username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <span>password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login">                
+            </div>
+            <p>Not Registered ? <a href="#" class="create">Create an account</a></p>
+        </div> 
+    </div>
+    <script>
+        let login = document.querySelector('.login');
+        let create = document.querySelector('.create');
+        let container= document.querySelector('.container');
+
+        login.onclick = function(){
+            container.classList.add('signinForm');
+        }
+        create.onclick = function(){
+            container.classList.remove('signinForm');
+        }
+    </script>
+</body>
+</html>

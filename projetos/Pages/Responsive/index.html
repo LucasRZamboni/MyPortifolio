@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Web Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+	<header>
+		<p>HEADER</p>
+	</header>
+		<section class="carrossel">
+				<h2 class="carrossel__titulo">Novos Lançamentos</h2>
+				<!-- Slider main container -->
+				<div class="swiper">
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide"><img src="batman.jpg" alt="Batman"></div>
+						<div class="swiper-slide"><img src="hobbit.jpg" alt="Hobbit"></div>
+						<div class="swiper-slide"><img src="blackpanther.jpg" alt="Pantera negra"></div>
+						<div class="swiper-slide"><img src="capitaoamerica.jpg" alt="Capitão América"></div>
+						<div class="swiper-slide"><img src="piratascaribe.jpg" alt="Piratas do Caribe"></div>
+						<div class="swiper-slide"><img src="topgun.jpg" alt="Top Gun"></div>
+					</div>
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
+				</div>
+				<div class="card">
+					<!-- Primeira linha -->
+					<div class="card__descricao">
+						<!-- primeira coluna -->
+						<div class="descricao">
+							<h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+							<h2 class="descricao__titulo-livro">Interestellar</h2>
+							<p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+						</div>
+						<!-- segunda coluna -->
+						<img src="interestellar.jpg" class="descricao__imagem">
+					</div>
+		
+					<!-- segunda linha -->
+					<div class="card__botoes">
+						<!-- primeira coluna -->
+						<ul class="botoes">
+							<li class="botoes__item">
+								<img src="Favoritos.svg" alt="favoritar">
+							</li>
+							<li class="botoes__item">
+								<img src="assets/Compras.svg" alt="add carinho compras">
+							</li>
+						</ul>
+						<!-- segunda coluna -->
+						<a href="#" class="botoes__ancora">Saiba mais</a>
+					</div>
+				</div>
+		</section>
+		<section>
+			
+		</section>
+	<footer>
+		<p>Desenvolvido por Lucas</p>
+	</footer>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+	<script>
+		const swiper = new Swiper('.swiper', {
+			spaceBetween: 10,
+			slidesPerView: 3,
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+			},
+		});
+	</script>
+</body>
+
+</html>
