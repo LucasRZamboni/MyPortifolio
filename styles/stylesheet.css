@@ -33,7 +33,7 @@ body {
 .container__principal {
   width: 100%;
   min-height: 100vh;
-  background-image: url("images/background2.jpg");
+  background-image: url("../images/background2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -48,7 +48,7 @@ body {
 
 main {
   width: 100%;
-  height: calc(100vh - 115px);
+  min-height: calc(100vh - 110px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,11 +58,9 @@ main .meio {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: fit-content;
-  width: fit-content;
+  /* min-height: 100vh; */
 }
 main .meio .home {
-  /* position: absolute; */
   font-size: 150px;
   font-family: var(--fonte-top-foot);
   color: var(--outra-cor);
@@ -71,12 +69,10 @@ main .meio .home {
 }
 main .meio .home:nth-child(1) {
   font-weight: 600;
-  /* margin-bottom: 90px; */
 }
 main .meio .home:nth-child(2) {
   font-size: 40px;
   font-weight: 300;
-  /* margin-top: 100px; */
   color: var(--outra-cor);
   text-shadow: 0px 0px 20px var(--text-shadow), 0 0 10px var(--cor-backfont);
 }

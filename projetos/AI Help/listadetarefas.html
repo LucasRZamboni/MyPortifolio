@@ -7,13 +7,14 @@
         border-collapse: collapse;
         width: 100%;
       }
-      
-      td, th {
+
+      td,
+      th {
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
       }
-      
+
       tr:nth-child(even) {
         background-color: #dddddd;
       }
@@ -21,115 +22,139 @@
   </head>
   <body>
     <h2>Minhas tarefas diárias</h2>
+    <button id="addTaskButton">Adicionar Tarefa</button>
+    <button onclick="exportToExcel()">Exportar para Excel</button>
+    <br /><br />
     <table id="tasksTable">
       <tr>
         <th>Tarefa</th>
         <th>Ações</th>
       </tr>
-      <tr>
-        <td>Lavar a louça</td>
-        <td>
-          <button onclick="editTask(this)">Editar</button>
-          <button onclick="deleteTask(this)">Apagar</button>
-        </td>
-      </tr>
-      <tr>
-        <td>Pagar as contas</td>
-        <td>
-          <button onclick="editTask(this)">Editar</button>
-          <button onclick="deleteTask(this)">Apagar</button>
-          <button id="add-task-button">Adicionar Tarefa</button>
-        </td>
-      </tr>
     </table>
-    <br><br>
-    <button onclick="exportToExcel()">Exportar para Excel</button>
-    
+
     <script>
+      const addTaskButton = document.querySelector("#addTaskButton");
+      const tasksTable = document.querySelector("#tasksTable");
 
-        // Código para editar a tarefa
+      addTaskButton.addEventListener("click", function () {
+        const newRow = document.createElement("tr");
+        const newTask = document.createElement("td");
+        const newActions = document.createElement("td");
+        const newEditButton = document.createElement("button");
+        const newDeleteButton = document.createElement("button");
 
+        newTask.textContent = "Nova Tarefa";
+        newEditButton.textContent = "Editar";
+        newDeleteButton.textContent = "Apagar";
+
+        newEditButton.onclick = function () {
+          editTask(this);
+        };
+        newDeleteButton.onclick = function () {
+          deleteTask(this);
+        };
+
+        newActions.appendChild(newEditButton);
+        newActions.appendChild(newDeleteButton);
+
+        newRow.appendChild(newTask);
+        newRow.appendChild(newActions);
+
+        tasksTable.appendChild(newRow);
+      });
 
       function editTask(button) {
-  // Obtém a linha da tabela que contém a tarefa
-  let row = button.parentNode.parentNode;
-  
-  // Obtém a célula da tabela que contém a tarefa
-  let taskCell = row.querySelector("td:first-child");
-  
-  // Cria um input para o usuário editar a tarefa
-  let taskInput = document.createElement("input");
-  taskInput.type = "text";
-  taskInput.value = taskCell.textContent;
-  
-  // Substitui a célula da tabela pela entrada de texto
-  taskCell.textContent = "";
-  taskCell.appendChild(taskInput);
-  
-  // Cria um botão para salvar a edição da tarefa
-  let saveButton = document.createElement("button");
-  saveButton.textContent = "Salvar";
-  saveButton.onclick = function() {
-    // Salva a edição da tarefa e substitui a entrada de texto pela célula da tabela
-    taskCell.textContent = taskInput.value;
-    row.querySelector("td:last-child").innerHTML = '<button onclick="editTask(this)">Editar</button><button onclick="deleteTask(this)">Apagar</button>';
-  };
-  
-  // Adiciona o botão de salvar à célula da tabela
-  taskCell.appendChild(saveButton);
-}
-
-        // Código para apagar a tarefa
-
+        // Código para editar a tarefa
+      }
 
       function deleteTask(button) {
-  // Obtém a linha da tabela que contém a tarefa
-  let row = button.parentNode.parentNode;
-  
-  // Confirma se o usuário deseja realmente apagar a tarefa
-  if (confirm("Tem certeza de que deseja apagar a tarefa?")) {
-    // Remove a linha da tabela
-    row.remove();
-  }
-}
+        // Código para apagar a tarefa
+      }
 
+      function exportToExcel() {
         // Código para exportar para Excel
+      }
+      // Código para editar a tarefa
 
-        
-function exportToExcel() {
-  // Obtém a tabela
-  let table = document.querySelector("table");
-  
-  // Inicializa o conteúdo CSV como uma string vazia
-  let csvContent = "";
-  
-  // Percorre as linhas da tabela
-  for (let i = 0; i < table.rows.length; i++) {
-    // Obtém a linha atual
-    let row = table.rows[i];
-    
-    // Percorre as células da linha
-    for (let j = 0; j < row.cells.length; j++) {
-      // Obtém a célula atual
-      let cell = row.cells[j];
-      
-      // Adiciona o conteúdo da célula ao conteúdo CSV
-      csvContent += cell.textContent + ",";
-    }
-    
-    // Remove a última vírgula e adiciona uma quebra de linha
-    csvContent = csvContent.slice(0, -1) + "\r\n";
-  }
-  
-  // Cria um link para o arquivo CSV
-  let link = document.createElement("a");
-  link.href = "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
-  link.download = "tasks.csv";
-  
-  // Clique no link para fazer o download do arquivo CSV
-  link.click();
-}
+      function editTask(button) {
+        // Obtém a linha da tabela que contém a tarefa
+        let row = button.parentNode.parentNode;
 
+        // Obtém a célula da tabela que contém a tarefa
+        let taskCell = row.querySelector("td:first-child");
+
+        // Cria um input para o usuário editar a tarefa
+        let taskInput = document.createElement("input");
+        taskInput.type = "text";
+        taskInput.value = taskCell.textContent;
+
+        // Substitui a célula da tabela pela entrada de texto
+        taskCell.textContent = "";
+        taskCell.appendChild(taskInput);
+
+        // Cria um botão para salvar a edição da tarefa
+        let saveButton = document.createElement("button");
+        saveButton.textContent = "Salvar";
+        saveButton.onclick = function () {
+          // Salva a edição da tarefa e substitui a entrada de texto pela célula da tabela
+          taskCell.textContent = taskInput.value;
+          row.querySelector("td:last-child").innerHTML =
+            '<button onclick="editTask(this)">Editar</button><button onclick="deleteTask(this)">Apagar</button>';
+        };
+
+        // Adiciona o botão de salvar à célula da tabela
+        taskCell.appendChild(saveButton);
+      }
+
+      // Código para apagar a tarefa
+
+      function deleteTask(button) {
+        // Obtém a linha da tabela que contém a tarefa
+        let row = button.parentNode.parentNode;
+
+        // Confirma se o usuário deseja realmente apagar a tarefa
+        if (confirm("Tem certeza de que deseja apagar a tarefa?")) {
+          // Remove a linha da tabela
+          row.remove();
+        }
+      }
+
+      // Código para exportar para Excel
+
+      function exportToExcel() {
+        // Obtém a tabela
+        let table = document.querySelector("table");
+
+        // Inicializa o conteúdo CSV como uma string vazia
+        let csvContent = "";
+
+        // Percorre as linhas da tabela
+        for (let i = 0; i < table.rows.length; i++) {
+          // Obtém a linha atual
+          let row = table.rows[i];
+
+          // Percorre as células da linha
+          for (let j = 0; j < row.cells.length; j++) {
+            // Obtém a célula atual
+            let cell = row.cells[j];
+
+            // Adiciona o conteúdo da célula ao conteúdo CSV
+            csvContent += cell.textContent + ",";
+          }
+
+          // Remove a última vírgula e adiciona uma quebra de linha
+          csvContent = csvContent.slice(0, -1) + "\r\n";
+        }
+
+        // Cria um link para o arquivo CSV
+        let link = document.createElement("a");
+        link.href =
+          "data:text/csv;charset=utf-8," + encodeURIComponent(csvContent);
+        link.download = "tasks.csv";
+
+        // Clique no link para fazer o download do arquivo CSV
+        link.click();
+      }
     </script>
   </body>
 </html>
