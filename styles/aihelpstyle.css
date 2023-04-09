@@ -3,10 +3,13 @@ main .meio {
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 main .meio .card {
+  margin-top: 30px;
   width: 50rem;
   max-width: 50rem;
+  min-height: 200px;
 }
 
 main .meio .card a {

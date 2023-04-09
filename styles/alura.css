@@ -6,7 +6,7 @@ main .meio {
   flex-wrap: wrap;
 }
 main .meio .card {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 50rem;
   max-width: 50rem;
   min-height: 300px;
