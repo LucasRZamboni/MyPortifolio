@@ -1,330 +1,297 @@
-// Vapor 5.2.2
+// Quartz 5.3.3
 // Bootswatch
 
 
 // Variables
 
-$web-font-path: "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" !default;
-@if $web-font-path {
-  @import url($web-font-path);
-}
-
-$outrun: false !default;
-
-:root {
-  color-scheme: dark;
-}
+$body-bg-image: linear-gradient(90deg, shade-color($cyan, 10%), shade-color($purple, 10%), shade-color($pink, 5%)) !default;
+$frosted-opacity: .3 !default;
 
 // Mixins
 
-@mixin text-shadow($color) {
-  text-shadow: 0 0 1px rgba($color, .6), 0 0 3px rgba($color, .5), 0 0 .5rem rgba($color, .3), 0 0 2rem rgba($color, .2);
-}
+@mixin glass($opacity: $frosted-opacity, $bg: $white) {
+  border: none;
+  box-shadow: inset 1px 1px $border-color, inset -1px -1px rgba($white, .1), $box-shadow;
+  @include frost($opacity, $bg);
 
-@mixin text-shadow-sm($color) {
-  text-shadow: 0 0 1px rgba($color, .3), 0 0 2px rgba($color, .3), 0 0 5px rgba($color, .2);
-}
-
-@mixin box-shadow($color) {
-  box-shadow: 0 0 2px rgba($color, .9), 0 0 4px rgba($color, .4), 0 0 1rem rgba($color, .3), 0 0 4rem rgba($color, .1);
-}
-
-@mixin box-shadow-lg($color) {
-  box-shadow: 0 0 2rem rgba(tint-color($color, 10%), .4), 0 0 8rem rgba(tint-color($color, 10%), .3);
-}
-
-@mixin header-shadow($color) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  .h1,
-  .h2,
-  .h3,
-  .h4,
-  .h5,
-  .h6 {
-    @include text-shadow($color);
+  a {
+    color: $card-color;
   }
+
+  .text-muted {
+    color: rgba($card-color, .7) !important;
+  }
+}
+
+@mixin frost($opacity: $frosted-opacity, $bg: $white) {
+  background-color: transparent;
+  background-image: linear-gradient(125deg, rgba($bg, ($opacity)), rgba($bg, ($opacity - .1)) 70%);
+  backdrop-filter: blur(5px);
 }
 
 // Body
 
 body {
-  background-image: linear-gradient(shade-color($body-bg, 10%) 0%, $body-bg 7%, $body-bg 80%, shade-color(#173e98, 50%) 100%);
-  @include text-shadow-sm($body-color);
-
-  @if ($outrun) {
-    position: relative;
-    overflow-x: hidden;
-
-    &::after {
-      position: absolute;
-      bottom: 0;
-      left: -50vw;
-      z-index: -1;
-      display: block;
-      width: 200vw;
-      height: 100vh;
-      content: "";
-      background-image: repeating-linear-gradient(rgba($blue, .6) 0 1px, transparent 1px 100%), repeating-linear-gradient(90deg, rgba($blue, .6) 0 1px, transparent 1px 100%);
-      background-size: 200px 200px;
-      transform: perspective(50vh) rotateX(50deg) translateY(-11.3vh) translateZ(10px);
-      transform-origin: center center;
-    }
-  }
+  background-image: $body-bg-image;
 }
 
-// Typography
-
-@include header-shadow($cyan);
-
-.text {
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      @include text-shadow-sm($value);
-    }
+@include color-mode(dark) {
+  body {
+    color: $white;
   }
-
-  &-white {
-    @include text-shadow-sm($white);
-    @include header-shadow($white);
-  }
-
-  &-muted {
-    @include text-shadow-sm(shade-color($text-muted, 20%));
-  }
-}
-
-a {
-  @include text-shadow-sm($link-color);
-}
-
-.blockquote {
-
-  &-footer {
-    @include text-shadow-sm(shade-color($blockquote-footer-color, 20%));
-  }
-}
-
-hr {
-  border-top: 1px solid $primary;
-  @include box-shadow($primary);
-  opacity: 1;
 }
 
 // Tables
 
-table,
-.table {
-  @include text-shadow-sm($white);
+.table-secondary {
+  --bs-table-hover-color: $white;
 }
 
 // Buttons
 
 .btn {
-  @each $color, $value in $theme-colors {
-    @if (($color != dark) or ($color != link)) {
-      &-#{$color},
-      &-outline-#{$color} {
-        @include box-shadow($value);
-      }
-    }
-
-    &-#{$color} {
-      @include text-shadow-sm($white);
-    }
-
-    &-outline-#{$color} {
-      color: $white;
-      border-width: 2px;
-    }
-  }
-
-  &-dark {
-    @include box-shadow($primary);
-  }
-
-  &-link {
-    box-shadow: none;
-    @include text-shadow($body-color);
-  }
-
-  &-outline-dark {
+  &-secondary {
     color: $white;
-  }
-}
+    border: none;
 
-// Navbars
+    &:hover,
+    &:focus {
+      color: $white;
+    }
 
-.navbar {
-  @each $color, $value in $theme-colors {
-    &.bg-#{$color} {
-      @include box-shadow($value);
+    &.disabled {
+      color: $white;
     }
   }
 }
 
-.navbar-dark {
-  &,
-  a {
-    @include text-shadow-sm($navbar-dark-color);
-  }
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) {
+  margin-left: 0;
+}
 
-  .navbar-brand {
-    @include text-shadow($navbar-dark-color);
+.btn-group-vertical > .btn:not(:first-child),
+.btn-group-vertical > .btn-group:not(:first-child) {
+  margin-top: 0;
+}
+
+.bg-light .btn {
+  background-color: rgba($black, .2);
+}
+
+// Forms
+
+.input-group-text,
+.form-control::file-selector-button {
+  background-color: transparent;
+  background-image: linear-gradient(125deg, rgba($white, .3), rgba($white, .2) 70%);
+  backdrop-filter: blur(5px);
+  border: none;
+}
+
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+  background-color: rgba($white, .1);
+}
+
+.input-group-text {
+  box-shadow: inset 1px 1px $border-color, inset -1px -1px rgba($white, .1);
+}
+
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+  margin-left: 0;
+  border-left: none;
+}
+
+.input-group:not(.has-validation) > :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu),
+.input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n + 3) {
+  border-right: none;
+}
+
+.form-select:not([multiple]) {
+  transition: border-color .15s ease-in-out;
+
+  option {
+    color: $black;
   }
 }
 
-.navbar-light {
-  &,
-  a {
-    @include text-shadow-sm($navbar-light-color);
-  }
+.bg-light .form-control {
+  color: $gray-800;
+  border-color: rgba($black, .2);
 
-  .navbar-brand {
-    @include text-shadow($navbar-light-color);
+  &::placeholder {
+    color: rgba($black, .2);
   }
 }
 
 // Navs
 
-.nav-link {
-  &.disabled {
-    @include text-shadow-sm($nav-link-disabled-color);
+.dropdown-menu {
+  @include glass(.3);
+}
+
+.nav-tabs {
+  .nav-link {
+    transition: none;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      isolation: auto;
+    }
+
+    &,
+    &.disabled {
+      background-color: $progress-bg;
+    }
+  }
+
+  .nav-item:first-child > .nav-link {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  .nav-item:last-child > .nav-link {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+
+  .nav-item .nav-link.active,
+  .nav-item.show .nav-link {
+    @include glass(1, $white);
+    border-radius: $border-radius;
+    transform: scale(1.1);
+
+    &:hover,
+    &:focus {
+      color: $gray-800;
+    }
+  }
+
+  .dropdown-menu {
+    border-radius: $border-radius;
   }
 }
 
-.nav-tabs .nav-link.active,
-.nav-tabs .nav-item.show .nav-link {
-  @include text-shadow-sm($component-active-bg);
-}
+.nav-pills {
+  .nav-link {
+    transition: none;
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
-  @include box-shadow($component-active-bg);
-}
-
-.breadcrumb {
-  &-item.active {
-    @include text-shadow-sm($breadcrumb-active-color);
+    &:hover,
+    &:focus {
+      color: $white;
+      isolation: auto;
+    }
   }
-
-  &-item + .breadcrumb-item::before {
-    @include text-shadow-sm($breadcrumb-divider-color);
-  }
-}
-
-.page-link {
-  border-radius: $border-radius;
-}
-
-.page-item.active {
-  .page-link {
-    @include box-shadow($component-active-bg);
-  }
-}
-
-// Forms
-
-legend {
-  @include text-shadow($body-color);
-}
-
-.valid-feedback {
-  @include text-shadow-sm($success);
-}
-
-.invalid-feedback {
-  @include text-shadow-sm($danger);
 }
 
 // Indicators
 
 .alert {
+  @include glass();
+  position: relative;
+  overflow: hidden;
+  color: $white;
+
   @each $color, $value in $theme-colors {
-    &-#{$color} {
-      color: $white;
+    $opacity: .7;
+    &-#{$color}::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .5rem;
+      height: 100%;
+      content: "";
       background-color: $value;
-      @include text-shadow-sm($white);
-      @include box-shadow-lg($value);
     }
   }
 
-  .alert-link,
-  a {
-    color: $white;
-  }
-
-  @include header-shadow($white);
-}
-
-.progress {
-  overflow: visible;
-
-  &-bar {
-    @include box-shadow($primary);
-
-    @each $color, $value in $theme-colors {
-      &.bg-#{$color} {
-        @include box-shadow($value);
-      }
-    }
+  .alert-link {
+    color: $card-color;
   }
 }
 
-.tooltip {
-
-  &-inner,
-  .arrow {
-    @include box-shadow-lg($primary);
+.badge {
+  &.bg-secondary {
+    --bs-bg-opacity: .4;
   }
-}
 
-.modal,
-.popover,
-.toast {
-  @include text-shadow-sm($white);
-  @include header-shadow($white);
-}
-
-.popover,
-.toast {
-  @include box-shadow-lg($primary);
-}
-
-.modal {
-  &-content {
-    @include box-shadow-lg($primary);
+  &.bg-light {
+    color: $gray-800;
   }
 }
 
 // Containers
 
 .list-group {
-
-  &-item.active {
-    @include header-shadow($white);
-  }
+  @include glass();
 }
 
 .card {
-  background-color: transparent;
-  @include text-shadow-sm($white);
+  @include glass();
 
   @each $color, $value in $theme-colors {
-    @if ($color != dark) {
-      &.border-#{$color} {
-        @include box-shadow($value);
+    @if ($color == secondary) {
+      --bs-secondary-rgb: transparent;
+    } @else {
+      &.bg-#{$color} {
+        background-image: none;
       }
     }
   }
 
-  &.border-dark {
-    @include box-shadow($primary);
+  &.bg-light {
+    .card-header,
+    .card-body {
+      color: $gray-800;
+    }
   }
 
-  @include header-shadow($white);
+  &.border {
+    @each $color, $value in $theme-colors {
+      &-#{$color} {
+        @include glass();
+
+        .card-header {
+          background-color: $value !important;
+          border-bottom: none;
+
+          @if ($color == light) {
+            color: $gray-800;
+          }
+        }
+      }
+    }
+  }
+
+  &-header {
+    font-weight: $headings-font-weight;
+  }
+}
+
+.accordion-item {
+  @include glass();
+  box-shadow: none;
+}
+
+.toast {
+  @include glass();
+}
+
+.popover {
+  @include glass();
+
+  &-header {
+    border-bottom-color: $border-color;
+  }
+}
+
+.tooltip {
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  @include glass();
+}
+
+.offcanvas {
+  @include glass();
 }
