@@ -1,0 +1,227 @@
+projects
+ ┣ AI Help
+ ┃ ┣ TaskList.html
+ ┃ ┣ javascript.js
+ ┃ ┣ listadetarefas.html
+ ┃ ┗ stylesheet.css
+ ┣ Botões
+ ┃ ┣ Glow 1
+ ┃ ┃ ┣ glowbutton.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ GlowBorder 1
+ ┃ ┃ ┣ Glowborder.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Hover animation
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Social Media
+ ┃ ┃ ┣ SocialMedia1.html
+ ┃ ┃ ┣ stylemedia.css
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Transition
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┗ botão AI
+ ┃ ┃ ┣ padrão.html
+ ┃ ┃ ┗ stylesheet.css
+ ┣ Curso Alura
+ ┃ ┣ Projeto 1
+ ┃ ┃ ┣ html5logo.png
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Projeto 2
+ ┃ ┃ ┣ assets
+ ┃ ┃ ┃ ┗ imagem.png
+ ┃ ┃ ┣ styles
+ ┃ ┃ ┃ ┗ stylesheet.css
+ ┃ ┃ ┣ about.html
+ ┃ ┃ ┗ index.html
+ ┃ ┣ Projeto 3
+ ┃ ┃ ┣ assets
+ ┃ ┃ ┃ ┣ Background.png
+ ┃ ┃ ┃ ┣ Combo.png
+ ┃ ┃ ┃ ┣ Logo.png
+ ┃ ┃ ┃ ┣ Notebook.png
+ ┃ ┃ ┃ ┣ Plataformas.png
+ ┃ ┃ ┃ ┣ Telas.png
+ ┃ ┃ ┃ ┣ celular.png
+ ┃ ┃ ┃ ┣ computador.png
+ ┃ ┃ ┃ ┗ tv.png
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┗ Projeto 4
+ ┃ ┃ ┣ assets
+ ┃ ┃ ┃ ┣ Alura.png
+ ┃ ┃ ┃ ┣ AluraEmpresas.png
+ ┃ ┃ ┃ ┣ AluraLatam.png
+ ┃ ┃ ┃ ┣ AluraLingua.png
+ ┃ ┃ ┃ ┣ AluraStart.png
+ ┃ ┃ ┃ ┣ Angular-1.png
+ ┃ ┃ ┃ ┣ Angular-2.png
+ ┃ ┃ ┃ ┣ Angular-3.png
+ ┃ ┃ ┃ ┣ Angular-4.png
+ ┃ ┃ ┃ ┣ Angular.png
+ ┃ ┃ ┃ ┣ ApacheKafka.png
+ ┃ ┃ ┃ ┣ Caelum.png
+ ┃ ┃ ┃ ┣ CarreiraSemFronteira.png
+ ┃ ┃ ┃ ┣ CasaDoCodigo.png
+ ┃ ┃ ┃ ┣ Compras.svg
+ ┃ ┃ ┃ ┣ Email.png
+ ┃ ┃ ┃ ┣ Email.svg
+ ┃ ┃ ┃ ┣ Estrelinhas.png
+ ┃ ┃ ┃ ┣ Favoritos-1.svg
+ ┃ ┃ ┃ ┣ Favoritos.svg
+ ┃ ┃ ┃ ┣ Frame 143.png
+ ┃ ┃ ┃ ┣ GUJ.png
+ ┃ ┃ ┃ ┣ Guia Front-end.png
+ ┃ ┃ ┃ ┣ HipstersJobs.png
+ ┃ ┃ ┃ ┣ HipstersTech.png
+ ┃ ┃ ┃ ┣ Javascript.png
+ ┃ ┃ ┃ ┣ Layers.png
+ ┃ ┃ ┃ ┣ Liderança.png
+ ┃ ┃ ┃ ┣ LikeABoss.png
+ ┃ ┃ ┃ ┣ Logo.png
+ ┃ ┃ ┃ ┣ Logo.svg
+ ┃ ┃ ┃ ┣ Menu.svg
+ ┃ ┃ ┃ ┣ MenuAberto.png
+ ┃ ┃ ┃ ┣ MenuAberto.svg
+ ┃ ┃ ┃ ┣ MetricasAgeis.png
+ ┃ ┃ ┃ ┣ MusicDot.png
+ ┃ ┃ ┃ ┣ PM3.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1-1.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1-2.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1-3.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1-4.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1-5.png
+ ┃ ┃ ┃ ┣ Perfil-escritora 1.png
+ ┃ ┃ ┃ ┣ Pesquisa.png
+ ┃ ┃ ┃ ┣ Pesquisa.svg
+ ┃ ┃ ┃ ┣ Portugol.png
+ ┃ ┃ ┃ ┣ Página inicial - LOGADA-1.png
+ ┃ ┃ ┃ ┣ Página inicial - LOGADA.png
+ ┃ ┃ ┃ ┣ Página inicial - MENU-1.png
+ ┃ ┃ ┃ ┣ Página inicial - MENU.png
+ ┃ ┃ ┃ ┣ Rectangle 30.png
+ ┃ ┃ ┃ ┣ Sacola.png
+ ┃ ┃ ┃ ┣ Scuba.png
+ ┃ ┃ ┃ ┣ Usuario.png
+ ┃ ┃ ┃ ┣ Usuário.svg
+ ┃ ┃ ┃ ┗ menu_black_24dp 1.png
+ ┃ ┃ ┣ styles
+ ┃ ┃ ┃ ┣ banner.css
+ ┃ ┃ ┃ ┣ carrossel.css
+ ┃ ┃ ┃ ┣ contato.css
+ ┃ ┃ ┃ ┣ header.css
+ ┃ ┃ ┃ ┣ rodape.css
+ ┃ ┃ ┃ ┗ topicos.css
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ reset.css
+ ┃ ┃ ┗ stylesheet.css
+ ┣ Diversos e aleatórios
+ ┃ ┗ Remover espaços.html
+ ┣ Forms
+ ┃ ┣ Cadastro
+ ┃ ┃ ┣ cadastrologo.png
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ mediasheet.css
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Form1
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Form2
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Login
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ login.png
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┗ Mensagem
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┣ Image slider
+ ┃ ┣ Image Slider 2
+ ┃ ┃ ┣ assets
+ ┃ ┃ ┃ ┣ imagem1.jpg
+ ┃ ┃ ┃ ┣ imagem10.jpg
+ ┃ ┃ ┃ ┣ imagem11.jpg
+ ┃ ┃ ┃ ┣ imagem12.jpg
+ ┃ ┃ ┃ ┣ imagem13.jpg
+ ┃ ┃ ┃ ┣ imagem14.jpg
+ ┃ ┃ ┃ ┣ imagem15.jpg
+ ┃ ┃ ┃ ┣ imagem16.jpg
+ ┃ ┃ ┃ ┣ imagem17.jpg
+ ┃ ┃ ┃ ┣ imagem18.jpg
+ ┃ ┃ ┃ ┣ imagem19.jpg
+ ┃ ┃ ┃ ┣ imagem2.jpg
+ ┃ ┃ ┃ ┣ imagem20.jpg
+ ┃ ┃ ┃ ┣ imagem3.jpg
+ ┃ ┃ ┃ ┣ imagem4.jpg
+ ┃ ┃ ┃ ┣ imagem5.jpg
+ ┃ ┃ ┃ ┣ imagem6.jpg
+ ┃ ┃ ┃ ┣ imagem7.jpg
+ ┃ ┃ ┃ ┣ imagem8.jpg
+ ┃ ┃ ┃ ┗ imagem9.jpg
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ seta.png
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┗ Image slider
+ ┃ ┃ ┣ foto1.jpg
+ ┃ ┃ ┣ foto2.jpg
+ ┃ ┃ ┣ foto3.jpg
+ ┃ ┃ ┣ foto3.png
+ ┃ ┃ ┣ foto4.jpg
+ ┃ ┃ ┣ foto5.jpg
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ javascript.js
+ ┃ ┃ ┗ stylesheet.css
+ ┣ Menus
+ ┃ ┣ Menu 1
+ ┃ ┃ ┣ menu.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Menu 2
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Menu 3
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylehseet.css
+ ┃ ┣ Menu 4
+ ┃ ┃ ┣ background1.jpg
+ ┃ ┃ ┣ background2.jpg
+ ┃ ┃ ┣ background3.png
+ ┃ ┃ ┣ bettalogo.png
+ ┃ ┃ ┣ darkbackground.png
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ logopng.jpg
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Menu 5
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┗ Menu 6
+ ┃ ┃ ┣ background.jpg
+ ┃ ┃ ┣ background2.jpg
+ ┃ ┃ ┣ dream logo.jpg
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ logo.png
+ ┃ ┃ ┣ script.js
+ ┃ ┃ ┗ stylesheet.css
+ ┗ Pages
+ ┃ ┣ Black Hole
+ ┃ ┃ ┣ background.jpg
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┗ stylesheet.css
+ ┃ ┣ Lorem Ipsum
+ ┃ ┃ ┣ loremimagem.jpg
+ ┃ ┃ ┣ loremimagem.png
+ ┃ ┃ ┣ page.css
+ ┃ ┃ ┗ page.html
+ ┃ ┗ Responsive
+ ┃ ┃ ┣ Favoritos.svg
+ ┃ ┃ ┣ batman.jpg
+ ┃ ┃ ┣ blackpanther.jpg
+ ┃ ┃ ┣ capitaoamerica.jpg
+ ┃ ┃ ┣ hobbit.jpg
+ ┃ ┃ ┣ index.html
+ ┃ ┃ ┣ interestellar.jpg
+ ┃ ┃ ┣ piratascaribe.jpg
+ ┃ ┃ ┣ stylesheet.css
+ ┃ ┃ ┗ topgun.jpg
