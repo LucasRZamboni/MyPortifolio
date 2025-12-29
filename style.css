@@ -9,6 +9,7 @@
   --text-light: #64748b;
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --header-bg: rgba(255, 255, 255, 0.9);
+  --btn-text: #ffffff;
 }
 
 /* Variáveis para o Dark Mode */
@@ -16,10 +17,13 @@ body.dark-mode {
   --bg-light: #0f172a;      /* Fundo escuro (Slate 900) */
   --white: #1e293b;         /* Cards escuros (Slate 800) */
   --text-main: #e2e8f0;     /* Texto claro */
-  --text-light: #94a3b8;    /* Texto secundário claro */
+  --text-light: #cbd5e1;    /* Texto secundário mais claro para melhor leitura */
   --secondary: #f8fafc;     /* Títulos claros */
+  --primary: #818cf8;       /* Indigo 400: Mais claro para contraste em fundo escuro */
+  --accent: #6366f1;        /* Indigo 500 */
   --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
   --header-bg: rgba(15, 23, 42, 0.9);
+  --btn-text: #0f172a;      /* Texto escuro no botão claro do modo dark */
 }
 
 * {
@@ -38,6 +42,24 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Barra de Rolagem Personalizada */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
 .container {
@@ -120,7 +142,7 @@ nav ul li a:hover {
 
 /* Seções */
 section {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 h2 {
@@ -133,7 +155,7 @@ h2 {
 /* Hero / Sobre */
 #sobre {
   text-align: center;
-  padding: 100px 0;
+  padding: 100px 20px;
 }
 
 #sobre p {
@@ -160,18 +182,86 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   min-width: 120px;
   transition: transform 0.3s ease;
+  position: relative; /* Necessário para z-index funcionar bem */
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
+  z-index: 10; /* Garante que o tooltip fique por cima dos outros cards */
 }
 
 .skill-icon.html { color: #E34F26; }
 .skill-icon.css { color: #1572B6; }
 .skill-icon.js { color: #F7DF1E; }
+.skill-icon.react { color: #61DAFB; }
+.skill-icon.tailwind { color: #38B2AC; }
+
+.skill-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--bg-light); /* Cria um efeito de profundidade */
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  overflow: visible; /* Permite que o tooltip apareça fora da barra */
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  border-radius: 3px;
+  background-color: var(--primary); /* Cor padrão */
+  transition: width 1s ease-in-out;
+  position: relative;
+}
+
+/* Tooltip (Texto) */
+.skill-progress::after {
+  content: attr(data-width);
+  position: absolute;
+  right: 0;
+  top: -30px;
+  background: var(--secondary);
+  color: var(--bg-light);
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%) translateY(5px); /* Centraliza na ponta da barra */
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Tooltip (Setinha) */
+.skill-progress::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -10px;
+  border: 5px solid transparent;
+  border-top-color: var(--secondary);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(50%) translateY(5px);
+  transition: all 0.3s ease;
+}
+
+/* Mostrar Tooltip ao passar o mouse na barra inteira */
+.skill-bar:hover .skill-progress::after,
+.skill-bar:hover .skill-progress::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(50%) translateY(0);
+}
+
+.skill-progress.html { background-color: #E34F26; }
+.skill-progress.css { background-color: #1572B6; }
+.skill-progress.js { background-color: #F7DF1E; }
+.skill-progress.react { background-color: #61DAFB; }
+.skill-progress.tailwind { background-color: #38B2AC; }
 
 .skill-card i {
   font-size: 2.5rem;
@@ -184,12 +274,18 @@ h2 {
   gap: 2rem;
 }
 
+/* Ajuste específico para dar mais ar ao final da lista de projetos */
+#projetos {
+  padding-bottom: 120px;
+  margin-top: 2rem;
+}
+
 /* Filtros de Projetos */
 .filter-container {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
@@ -265,7 +361,7 @@ h2 {
 .btn {
   display: inline-block;
   background: linear-gradient(135deg, var(--primary), var(--accent));
-  color: white;
+  color: var(--btn-text);
   padding: 0.6rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
@@ -277,12 +373,23 @@ h2 {
   opacity: 0.9;
 }
 
+.btn-full {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
 /* Contato e Footer */
 #contato {
   background: var(--white);
   text-align: center;
   border-top: 1px solid rgba(226, 232, 240, 0.1);
   transition: background-color 0.3s ease;
+}
+
+.contact-intro {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .social-links {
@@ -463,6 +570,24 @@ footer {
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
+.error-message {
+  color: #ef4444; /* Vermelho para erro */
+  font-size: 0.85rem;
+  display: block;
+  opacity: 0;
+  transform: translateY(-10px);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.error-message.visible {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 50px; /* Altura suficiente para a mensagem */
+  margin-top: 0.25rem;
+}
+
 /* Responsividade (Mobile) */
 @media (max-width: 768px) {
   .mobile-menu-btn {
@@ -494,5 +619,28 @@ footer {
 
   nav ul li a {
     font-size: 1.5rem;
+  }
+
+  /* Ajustes de Espaçamento para Mobile */
+  section {
+    padding: 60px 0;
+  }
+
+  #projetos {
+    padding-bottom: 80px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .projects-grid,
+  .skills-grid {
+    gap: 1.5rem;
+  }
+
+  #sobre {
+    padding: 60px 20px;
   }
 }

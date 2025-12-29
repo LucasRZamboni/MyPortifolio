@@ -109,6 +109,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Animação das Barras de Progresso
+    const skillObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const bar = entry.target;
+                const width = bar.getAttribute('data-width');
+                if (width) {
+                    bar.style.width = width;
+                }
+                skillObserver.unobserve(bar);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.skill-progress').forEach(bar => {
+        skillObserver.observe(bar);
+    });
+
     // Lógica de Filtros de Projetos
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.projeto');
@@ -186,6 +204,43 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.addEventListener('submit', async function(event) {
             event.preventDefault();
+
+            // Validação Simples com JavaScript
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // Limpa mensagens de erro anteriores
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.textContent = '';
+                el.classList.remove('visible');
+            });
+            let isValid = true;
+
+            if (name.length < 2) {
+                const nameError = document.getElementById('name-error');
+                nameError.textContent = "Por favor, digite um nome válido.";
+                nameError.classList.add('visible');
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                const emailError = document.getElementById('email-error');
+                emailError.textContent = "Por favor, digite um email válido.";
+                emailError.classList.add('visible');
+                isValid = false;
+            }
+
+            if (message.length < 10) {
+                const messageError = document.getElementById('message-error');
+                messageError.textContent = "Sua mensagem é muito curta (mínimo 10 caracteres).";
+                messageError.classList.add('visible');
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
             const btn = form.querySelector('button');
             const originalBtnText = btn.textContent;
             

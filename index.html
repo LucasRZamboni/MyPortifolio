@@ -75,14 +75,37 @@
           <div class="skill-card hidden">
             <i class="fab fa-html5 skill-icon html"></i>
             <span>HTML5</span>
+            <div class="skill-bar">
+              <div class="skill-progress html" data-width="95%" style="width: 0"></div>
+            </div>
           </div>
           <div class="skill-card hidden">
             <i class="fab fa-css3-alt skill-icon css"></i>
             <span>CSS3</span>
+            <div class="skill-bar">
+              <div class="skill-progress css" data-width="90%" style="width: 0"></div>
+            </div>
           </div>
           <div class="skill-card hidden">
             <i class="fab fa-js skill-icon js"></i>
             <span>JavaScript</span>
+            <div class="skill-bar">
+              <div class="skill-progress js" data-width="85%" style="width: 0"></div>
+            </div>
+          </div>
+          <div class="skill-card hidden">
+            <i class="fab fa-react skill-icon react"></i>
+            <span>React</span>
+            <div class="skill-bar">
+              <div class="skill-progress react" data-width="75%" style="width: 0"></div>
+            </div>
+          </div>
+          <div class="skill-card hidden">
+            <i class="fas fa-wind skill-icon tailwind"></i>
+            <span>Tailwind</span>
+            <div class="skill-bar">
+              <div class="skill-progress tailwind" data-width="80%" style="width: 0"></div>
+            </div>
           </div>
           <!-- Adicione mais habilidades conforme necessário -->
         </div>
@@ -117,6 +140,7 @@
               href="projects/AI%20Help/listadetarefas.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -138,6 +162,7 @@
               href="projects/AI%20Help/TaskList.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -158,6 +183,7 @@
               href="projects/Curso%20Alura/Projeto%204/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -177,6 +203,7 @@
               href="projects/Pages/Black%20Hole/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -196,6 +223,7 @@
               href="projects/Pages/Responsive/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -211,6 +239,7 @@
               href="projects/Image%20slider/Image%20slider/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -230,6 +259,7 @@
               href="projects/Image%20slider/Image%20Slider%202/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -246,6 +276,7 @@
               href="projects/Forms/Login/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -262,6 +293,7 @@
               href="projects/Forms/Cadastro/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -279,6 +311,7 @@
               href="projects/Menus/Menu%204/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -295,6 +328,7 @@
               href="projects/Menus/Menu%206/index.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -312,6 +346,7 @@
               href="projects/Botões/Glow%201/glowbutton.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -328,6 +363,7 @@
               href="projects/Botões/GlowBorder%201/Glowborder.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -344,6 +380,7 @@
               href="projects/Botões/Social%20Media/SocialMedia1.html"
               class="btn"
               target="_blank"
+              rel="noopener noreferrer"
               >Ver Projeto</a
             >
           </article>
@@ -353,7 +390,7 @@
       <section id="contato">
         <div class="container">
           <h2 class="hidden">Contato</h2>
-          <p class="hidden" style="text-align: center; margin-bottom: 2rem">
+          <p class="hidden contact-intro">
             Tem um projeto em mente? Vamos conversar!
           </p>
 
@@ -372,6 +409,7 @@
                 required
                 placeholder="Seu nome"
               />
+              <span class="error-message" id="name-error"></span>
             </div>
             <div class="form-group">
               <label for="email">Email</label>
@@ -382,6 +420,7 @@
                 required
                 placeholder="seu@email.com"
               />
+              <span class="error-message" id="email-error"></span>
             </div>
             <div class="form-group">
               <label for="message">Mensagem</label>
@@ -392,11 +431,11 @@
                 required
                 placeholder="Sua mensagem..."
               ></textarea>
+              <span class="error-message" id="message-error"></span>
             </div>
             <button
               type="submit"
-              class="btn"
-              style="width: 100%; border: none; cursor: pointer"
+              class="btn btn-full"
             >
               Enviar Mensagem
             </button>
@@ -421,16 +460,18 @@
           href="https://github.com/LucasRZamboni"
           target="_blank"
           aria-label="GitHub"
+          rel="noopener noreferrer"
           ><i class="fab fa-github"></i
         ></a>
         <a
           href="https://www.linkedin.com/in/lucas-zamboni-5a69b918b"
           target="_blank"
           aria-label="LinkedIn"
+          rel="noopener noreferrer"
           ><i class="fab fa-linkedin"></i
         ></a>
       </div>
-      <p>&copy; 2023 lucas. Todos os direitos reservados.</p>
+      <p>&copy; 2024 Lucas. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
