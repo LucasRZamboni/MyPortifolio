@@ -4,34 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio | lucas</title>
-    <meta name="description" content="Portfólio de Lucas - Desenvolvedor Web Full Stack especializado em criar soluções digitais modernas e performáticas.">
-    <meta property="og:title" content="Portfólio | Lucas">
-    <meta property="og:description" content="Confira meus projetos e habilidades em desenvolvimento web.">
-    <meta property="og:type" content="website">
+    <meta
+      name="description"
+      content="Portfólio de Lucas - Desenvolvedor Web Full Stack especializado em criar soluções digitais modernas e performáticas."
+    />
+    <meta property="og:title" content="Portfólio | Lucas" />
+    <meta
+      property="og:description"
+      content="Confira meus projetos e habilidades em desenvolvimento web."
+    />
+    <meta property="og:type" content="website" />
     <!-- Favicon (Substitua pelo seu ícone) -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+
     <!-- Google Fonts: Poppins para um visual moderno -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <div class="container header-flex">
-        <a href="#" class="logo">lucas</a>
-        <button class="mobile-menu-btn" aria-label="Abrir menu"><i class="fas fa-bars"></i></button>
+        <a href="#" class="logo">Lucas</a>
+        <button class="mobile-menu-btn" aria-label="Abrir menu">
+          <i class="fas fa-bars"></i>
+        </button>
         <nav class="nav-menu">
           <ul>
             <li><a href="#sobre" class="nav-link">Sobre</a></li>
             <li><a href="#projetos" class="nav-link">Projetos</a></li>
             <li><a href="#contato" class="nav-link">Contato</a></li>
-            <li><button id="theme-toggle" class="theme-btn" aria-label="Alternar tema">🌙</button></li>
+            <li>
+              <button
+                id="theme-toggle"
+                class="theme-btn"
+                aria-label="Alternar tema"
+              >
+                🌙
+              </button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -41,7 +63,7 @@
       <section id="sobre" class="container">
         <h2 class="hidden" id="typewriter">Olá, eu sou o lucas 👋</h2>
         <p class="hidden">
-          Desenvolvedor web apaixonado por criar soluções digitais inovadoras, 
+          Desenvolvedor web apaixonado por criar soluções digitais inovadoras,
           focadas em experiência do usuário, design limpo e alta performance.
         </p>
       </section>
@@ -68,7 +90,7 @@
 
       <section id="projetos" class="container">
         <h2 class="hidden">Meus Projetos</h2>
-        
+
         <!-- Botões de Filtro -->
         <div class="filter-container hidden">
           <button class="filter-btn active" data-filter="all">Todos</button>
@@ -79,140 +101,305 @@
         </div>
 
         <div class="projects-grid">
-          
           <!-- === APPS & SITES === -->
           <article class="projeto hidden" data-category="apps">
-            <img src="images/listadetarefas.jpg" alt="Preview Lista de Tarefas" loading="lazy">
+            <img
+              src="images/listadetarefas.jpg"
+              alt="Preview Lista de Tarefas"
+              loading="lazy"
+            />
             <h3>Lista de Tarefas</h3>
             <p>App de gerenciamento de tarefas para organização diária.</p>
-            <div class="tech-stack"><i class="fab fa-js" title="JavaScript"></i></div>
-            <a href="projects/AI%20Help/listadetarefas.html" class="btn" target="_blank">Ver Projeto</a>
-          </article>
-          
-          <article class="projeto hidden" data-category="apps">
-            <img src="images/placeholder.jpg" alt="Preview TaskList" loading="lazy">
-            <h3>Task List V2</h3>
-            <p>Versão alternativa da lista de tarefas com funcionalidades extras.</p>
-            <div class="tech-stack"><i class="fab fa-js" title="JavaScript"></i></div>
-            <a href="projects/AI%20Help/TaskList.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-js" title="JavaScript"></i>
+            </div>
+            <a
+              href="projects/AI%20Help/listadetarefas.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="apps">
-            <img src="images/aluraplus.jpg" alt="Preview Alura Plus" loading="lazy">
+            <img
+              src="images/placeholder.jpg"
+              alt="Preview TaskList"
+              loading="lazy"
+            />
+            <h3>Task List V2</h3>
+            <p>
+              Versão alternativa da lista de tarefas com funcionalidades extras.
+            </p>
+            <div class="tech-stack">
+              <i class="fab fa-js" title="JavaScript"></i>
+            </div>
+            <a
+              href="projects/AI%20Help/TaskList.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
+          </article>
+
+          <article class="projeto hidden" data-category="apps">
+            <img
+              src="images/aluraplus.jpg"
+              alt="Preview Alura Plus"
+              loading="lazy"
+            />
             <h3>Alura Plus</h3>
             <p>Landing page moderna responsiva (Flexbox/Grid).</p>
-            <div class="tech-stack"><i class="fab fa-html5" title="HTML5"></i><i class="fab fa-css3-alt" title="CSS3"></i></div>
-            <a href="projects/Curso%20Alura/Projeto%204/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-html5" title="HTML5"></i
+              ><i class="fab fa-css3-alt" title="CSS3"></i>
+            </div>
+            <a
+              href="projects/Curso%20Alura/Projeto%204/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="apps">
-            <img src="images/blackhole.jpg" alt="Preview Black Hole" loading="lazy">
+            <img
+              src="images/blackhole.jpg"
+              alt="Preview Black Hole"
+              loading="lazy"
+            />
             <h3>Black Hole</h3>
             <p>Animação avançada CSS simulando um buraco negro.</p>
-            <div class="tech-stack"><i class="fab fa-css3-alt" title="CSS3"></i></div>
-            <a href="projects/Pages/Black%20Hole/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-css3-alt" title="CSS3"></i>
+            </div>
+            <a
+              href="projects/Pages/Black%20Hole/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="apps">
-            <img src="images/responsive.jpg" alt="Preview Responsive" loading="lazy">
+            <img
+              src="images/responsive.jpg"
+              alt="Preview Responsive"
+              loading="lazy"
+            />
             <h3>Layout Responsivo</h3>
             <p>Demonstração de layout adaptável (Mobile First).</p>
-            <div class="tech-stack"><i class="fab fa-html5" title="HTML5"></i></div>
-            <a href="projects/Pages/Responsive/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-html5" title="HTML5"></i>
+            </div>
+            <a
+              href="projects/Pages/Responsive/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="apps">
-            <img src="images/slider.jpg" alt="Preview Slider" loading="lazy">
+            <img src="images/slider.jpg" alt="Preview Slider" loading="lazy" />
             <h3>Image Slider</h3>
             <p>Galeria de imagens interativa com JavaScript.</p>
-            <div class="tech-stack"><i class="fab fa-js" title="JavaScript"></i></div>
-            <a href="projects/Image%20slider/Image%20slider/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-js" title="JavaScript"></i>
+            </div>
+            <a
+              href="projects/Image%20slider/Image%20slider/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="apps">
-            <img src="projects/Image%20slider/Image%20Slider%202/assets/imagem1.jpg" alt="Preview Slider 2" loading="lazy">
+            <img
+              src="projects/Image%20slider/Image%20Slider%202/assets/imagem1.jpg"
+              alt="Preview Slider 2"
+              loading="lazy"
+            />
             <h3>Image Slider V2</h3>
             <p>Segunda versão da galeria com novas transições.</p>
-            <div class="tech-stack"><i class="fab fa-js" title="JavaScript"></i></div>
-            <a href="projects/Image%20slider/Image%20Slider%202/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-js" title="JavaScript"></i>
+            </div>
+            <a
+              href="projects/Image%20slider/Image%20Slider%202/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <!-- === FORMULÁRIOS === -->
           <article class="projeto hidden" data-category="forms">
-            <img src="images/login.jpg" alt="Preview Login" loading="lazy">
+            <img src="images/login.jpg" alt="Preview Login" loading="lazy" />
             <h3>Tela de Login</h3>
             <p>Interface de login moderna com design limpo.</p>
-            <div class="tech-stack"><i class="fab fa-css3-alt" title="CSS3"></i></div>
-            <a href="projects/Forms/Login/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <div class="tech-stack">
+              <i class="fab fa-css3-alt" title="CSS3"></i>
+            </div>
+            <a
+              href="projects/Forms/Login/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="forms">
-            <img src="projects/Forms/Cadastro/cadastrologo.png" alt="Preview Cadastro" loading="lazy">
+            <img
+              src="projects/Forms/Cadastro/cadastrologo.png"
+              alt="Preview Cadastro"
+              loading="lazy"
+            />
             <h3>Cadastro Completo</h3>
             <p>Formulário de cadastro estilizado.</p>
-            <a href="projects/Forms/Cadastro/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Forms/Cadastro/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <!-- === MENUS === -->
           <article class="projeto hidden" data-category="menus">
-            <img src="projects/Menus/Menu%204/logopng.jpg" alt="Preview Menu 4" loading="lazy">
+            <img
+              src="projects/Menus/Menu%204/logopng.jpg"
+              alt="Preview Menu 4"
+              loading="lazy"
+            />
             <h3>Menu Dark</h3>
             <p>Menu de navegação com tema escuro.</p>
-            <a href="projects/Menus/Menu%204/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Menus/Menu%204/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="menus">
-            <img src="projects/Menus/Menu%206/dream%20logo.jpg" alt="Preview Menu 6" loading="lazy">
+            <img
+              src="projects/Menus/Menu%206/dream%20logo.jpg"
+              alt="Preview Menu 6"
+              loading="lazy"
+            />
             <h3>Menu Animado</h3>
             <p>Menu com efeitos avançados de hover.</p>
-            <a href="projects/Menus/Menu%206/index.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Menus/Menu%206/index.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <!-- === BOTÕES === -->
           <article class="projeto hidden" data-category="botoes">
-            <img src="images/placeholder.jpg" alt="Preview Glow" loading="lazy">
+            <img
+              src="images/placeholder.jpg"
+              alt="Preview Glow"
+              loading="lazy"
+            />
             <h3>Botão Glow</h3>
             <p>Efeito de brilho neon em CSS.</p>
-            <a href="projects/Botões/Glow%201/glowbutton.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Botões/Glow%201/glowbutton.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="botoes">
-            <img src="images/placeholder.jpg" alt="Preview Border" loading="lazy">
+            <img
+              src="images/placeholder.jpg"
+              alt="Preview Border"
+              loading="lazy"
+            />
             <h3>Botão Borda Animada</h3>
             <p>Animação de borda infinita.</p>
-            <a href="projects/Botões/GlowBorder%201/Glowborder.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Botões/GlowBorder%201/Glowborder.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
 
           <article class="projeto hidden" data-category="botoes">
-            <img src="images/placeholder.jpg" alt="Preview Social" loading="lazy">
+            <img
+              src="images/placeholder.jpg"
+              alt="Preview Social"
+              loading="lazy"
+            />
             <h3>Botões Social Media</h3>
             <p>Ícones interativos para redes sociais.</p>
-            <a href="projects/Botões/Social%20Media/SocialMedia1.html" class="btn" target="_blank">Ver Projeto</a>
+            <a
+              href="projects/Botões/Social%20Media/SocialMedia1.html"
+              class="btn"
+              target="_blank"
+              >Ver Projeto</a
+            >
           </article>
-
         </div>
       </section>
 
       <section id="contato">
         <div class="container">
           <h2 class="hidden">Contato</h2>
-          <p class="hidden" style="text-align: center; margin-bottom: 2rem;">Tem um projeto em mente? Vamos conversar!</p>
-          
+          <p class="hidden" style="text-align: center; margin-bottom: 2rem">
+            Tem um projeto em mente? Vamos conversar!
+          </p>
+
           <!-- Substitua o link abaixo pelo seu endpoint do Formspree -->
-          <form action="https://formspree.io/f/xgoedwvw" method="POST" class="contact-form hidden">
+          <form
+            action="https://formspree.io/f/xgoedwvw"
+            method="POST"
+            class="contact-form hidden"
+          >
             <div class="form-group">
               <label for="name">Nome</label>
-              <input type="text" id="name" name="name" required placeholder="Seu nome">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Seu nome"
+              />
             </div>
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required placeholder="seu@email.com">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="seu@email.com"
+              />
             </div>
             <div class="form-group">
               <label for="message">Mensagem</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Sua mensagem..."></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Sua mensagem..."
+              ></textarea>
             </div>
-            <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Enviar Mensagem</button>
+            <button
+              type="submit"
+              class="btn"
+              style="width: 100%; border: none; cursor: pointer"
+            >
+              Enviar Mensagem
+            </button>
           </form>
         </div>
       </section>
@@ -221,7 +408,7 @@
     <!-- Modal de Imagem -->
     <div id="image-modal" class="modal">
       <button class="close-modal" aria-label="Fechar modal">&times;</button>
-      <img class="modal-content" id="modal-img" alt="Imagem em tela cheia">
+      <img class="modal-content" id="modal-img" alt="Imagem em tela cheia" />
     </div>
 
     <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
@@ -230,8 +417,18 @@
 
     <footer>
       <div class="social-links">
-        <a href="https://github.com/SEU_USUARIO" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/SEU_USUARIO" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a
+          href="https://github.com/LucasRZamboni"
+          target="_blank"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/lucas-zamboni-5a69b918b"
+          target="_blank"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
       </div>
       <p>&copy; 2023 lucas. Todos os direitos reservados.</p>
     </footer>
